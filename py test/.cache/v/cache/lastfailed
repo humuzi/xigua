@@ -1,0 +1,12 @@
+{
+  "test_user_password_with_params.py::TestUserPasswordWithParam::()::test_user_password[user2]": true,
+  "test_user_password_with_params.py::TestUserPasswordWithParam::()::test_user_password[user3]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_node1[go-375]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_node1[java-63]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_node1[node js-436]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_node1[python-90]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_nodes[go]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_nodes[java]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_nodes[node js]": true,
+  "v2ex_api_test.py::TestV2exApi::()::test_nodes[python]": true
+}

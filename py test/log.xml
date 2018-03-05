@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="8" name="pytest" skips="0" tests="9" time="2.449"><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="7" name="test_node" time="0.7690439224243164"></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="18" name="test_nodes[python]" time="0.11800646781921387"><failure message="KeyError: &apos;name&apos;">self = &lt;v2ex_api_test.TestV2exApi object at 0x0000000004202208&gt;, lang = &apos;python&apos;
+
+    def test_nodes(self,lang):
+        path = &quot;api/nodes/show.json?name = %s&quot;%(lang)
+        url = self.domain + path
+        res =requests.get(url).json()
+&gt;       assert res[&quot;name&quot;] == lang
+E       KeyError: &apos;name&apos;
+
+v2ex_api_test.py:23: KeyError</failure></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="18" name="test_nodes[java]" time="0.16400957107543945"><failure message="KeyError: &apos;name&apos;">self = &lt;v2ex_api_test.TestV2exApi object at 0x00000000041FB4E0&gt;, lang = &apos;java&apos;
+
+    def test_nodes(self,lang):
+        path = &quot;api/nodes/show.json?name = %s&quot;%(lang)
+        url = self.domain + path
+        res =requests.get(url).json()
+&gt;       assert res[&quot;name&quot;] == lang
+E       KeyError: &apos;name&apos;
+
+v2ex_api_test.py:23: KeyError</failure></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="18" name="test_nodes[go]" time="0.15700888633728027"><failure message="KeyError: &apos;name&apos;">self = &lt;v2ex_api_test.TestV2exApi object at 0x00000000041AFE48&gt;, lang = &apos;go&apos;
+
+    def test_nodes(self,lang):
+        path = &quot;api/nodes/show.json?name = %s&quot;%(lang)
+        url = self.domain + path
+        res =requests.get(url).json()
+&gt;       assert res[&quot;name&quot;] == lang
+E       KeyError: &apos;name&apos;
+
+v2ex_api_test.py:23: KeyError</failure></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="18" name="test_nodes[node js]" time="0.17901062965393066"><failure message="KeyError: &apos;name&apos;">self = &lt;v2ex_api_test.TestV2exApi object at 0x00000000041FE7F0&gt;
+lang = &apos;node js&apos;
+
+    def test_nodes(self,lang):
+        path = &quot;api/nodes/show.json?name = %s&quot;%(lang)
+        url = self.domain + path
+        res =requests.get(url).json()
+&gt;       assert res[&quot;name&quot;] == lang
+E       KeyError: &apos;name&apos;
+
+v2ex_api_test.py:23: KeyError</failure></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="26" name="test_node1[python-90]" time="0.1370079517364502"><failure message="assert 0">self = &lt;v2ex_api_test.TestV2exApi object at 0x0000000004204400&gt;, name = &apos;python&apos;
+node_id = 90
+
+    @pytest.mark.parametrize(&quot;name,node_id&quot;,[(&apos;python&apos;,90),(&apos;java&apos;,&apos;63&apos;),(&apos;go&apos;,375),(&apos;node js&apos;,436)])
+    def test_node1(self,name,node_id):
+        path =&quot;api/nodes/show.json?name=%s&quot;%(name)
+        url = self.domain + path
+        res = requests.get(url).json()
+        assert res[&quot;name&quot;] == name
+        assert res[&quot;id&quot;] == node_id
+&gt;       assert 0
+E       assert 0
+
+v2ex_api_test.py:34: AssertionError</failure></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="26" name="test_node1[java-63]" time="0.1350078582763672"><failure message="AssertionError: assert 63 == &apos;63&apos;">self = &lt;v2ex_api_test.TestV2exApi object at 0x0000000004271160&gt;, name = &apos;java&apos;
+node_id = &apos;63&apos;
+
+    @pytest.mark.parametrize(&quot;name,node_id&quot;,[(&apos;python&apos;,90),(&apos;java&apos;,&apos;63&apos;),(&apos;go&apos;,375),(&apos;node js&apos;,436)])
+    def test_node1(self,name,node_id):
+        path =&quot;api/nodes/show.json?name=%s&quot;%(name)
+        url = self.domain + path
+        res = requests.get(url).json()
+        assert res[&quot;name&quot;] == name
+&gt;       assert res[&quot;id&quot;] == node_id
+E       AssertionError: assert 63 == &apos;63&apos;
+
+v2ex_api_test.py:33: AssertionError</failure></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="26" name="test_node1[go-375]" time="0.13000750541687012"><failure message="assert 0">self = &lt;v2ex_api_test.TestV2exApi object at 0x00000000041FB2B0&gt;, name = &apos;go&apos;
+node_id = 375
+
+    @pytest.mark.parametrize(&quot;name,node_id&quot;,[(&apos;python&apos;,90),(&apos;java&apos;,&apos;63&apos;),(&apos;go&apos;,375),(&apos;node js&apos;,436)])
+    def test_node1(self,name,node_id):
+        path =&quot;api/nodes/show.json?name=%s&quot;%(name)
+        url = self.domain + path
+        res = requests.get(url).json()
+        assert res[&quot;name&quot;] == name
+        assert res[&quot;id&quot;] == node_id
+&gt;       assert 0
+E       assert 0
+
+v2ex_api_test.py:34: AssertionError</failure></testcase><testcase classname="v2ex_api_test.TestV2exApi" file="v2ex_api_test.py" line="26" name="test_node1[node js-436]" time="0.15900921821594238"><failure message="KeyError: &apos;name&apos;">self = &lt;v2ex_api_test.TestV2exApi object at 0x00000000041FE208&gt;
+name = &apos;node js&apos;, node_id = 436
+
+    @pytest.mark.parametrize(&quot;name,node_id&quot;,[(&apos;python&apos;,90),(&apos;java&apos;,&apos;63&apos;),(&apos;go&apos;,375),(&apos;node js&apos;,436)])
+    def test_node1(self,name,node_id):
+        path =&quot;api/nodes/show.json?name=%s&quot;%(name)
+        url = self.domain + path
+        res = requests.get(url).json()
+&gt;       assert res[&quot;name&quot;] == name
+E       KeyError: &apos;name&apos;
+
+v2ex_api_test.py:32: KeyError</failure></testcase></testsuite>
