@@ -50,5 +50,5 @@ try:
 except:
     smtp = smtplib.SMTP_SSL(smtpserver,port)
     smtp.login(sender,psw)
-smtp.sendmail(sender,receiver,msg.as_string())
+smtp.sendmail(sender,receiver,msg.as_string())  #msg.as_string()  把上面发送的邮件内容变成字符串
 smtp.quit()
